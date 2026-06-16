@@ -1,0 +1,94 @@
+- name: create land directories
+  file:
+    state: directory
+    path: "{{ item }}"
+    mode: '0755'
+    recurse: true
+  with_items:
+    - "/opt/nemo-copilot/land"
+    - "/opt/nemo-copilot/land/src"
+
+- name: check if land image exists on remote
+  shell: "docker images -q land:{{ image_tag }}"
+  register: land_image_exists
+  ignore_errors: true
+
+- name: build land image locally (when not exists on remote)
+  block:
+    - name: build land image locally
+      shell: "cd {{ playbook_dir }}/../../docker/land && docker build -t land:{{ image_tag }} ."
+      delegate_to: localhost
+      become: false
+
+    - name: save land image to tar
+      shell: "docker save land:{{ image_tag }} > /tmp/land_{{ image_tag }}.tar"
+      delegate_to: localhost
+      become: false
+
+    - name: ensure temp directory exists on remote
+      file:
+        path: "/tmp/land-deploy"
+        state: directory
+        mode: '0755'
+
+    - name: copy image tar to remote
+      copy:
+        src: "/tmp/land_{{ image_tag }}.tar"
+        dest: "/tmp/land-deploy/land_{{ image_tag }}.tar"
+        mode: '0644'
+
+    - name: load land image on remote
+      shell: "docker load < /tmp/land-deploy/land_{{ image_tag }}.tar"
+
+    - name: cleanup local tar file
+      file:
+        path: "/tmp/land_{{ image_tag }}.tar"
+        state: absent
+      delegate_to: localhost
+      become: false
+      ignore_errors: true
+
+    - name: cleanup remote tar file
+      file:
+        path: "/tmp/land-deploy"
+        state: absent
+      ignore_errors: true
+  when: land_image_exists.stdout == ""
+
+- name: tar source files locally
+  shell: |
+    cd {{ playbook_dir }}/../../docker/land && tar --exclude='.git' --exclude='__pycache__' --exclude='*.pyc' --exclude='node_modules' --exclude='.gitignore' --exclude='Dockerfile' --exclude='README.MD' -czf /tmp/land_src_{{ image_tag }}.tar.gz .
+  delegate_to: localhost
+  become: false
+
+- name: ensure temp directory exists on remote
+  file:
+    path: "/tmp/land-deploy"
+    state: directory
+    mode: '0755'
+
+- name: copy source tar to remote
+  copy:
+    src: "/tmp/land_src_{{ image_tag }}.tar.gz"
+    dest: "/tmp/land-deploy/land_src_{{ image_tag }}.tar.gz"
+    mode: '0644'
+
+- name: unpack source on remote
+  shell: "cd /opt/nemo-copilot/land/src && tar -xzf /tmp/land-deploy/land_src_{{ image_tag }}.tar.gz && rm -f /tmp/land-deploy/land_src_{{ image_tag }}.tar.gz"
+
+- name: cleanup local source tar
+  file:
+    path: "/tmp/land_src_{{ image_tag }}.tar.gz"
+    state: absent
+  delegate_to: localhost
+  become: false
+  ignore_errors: true
+
+- name: copy docker-compose.yml
+  template:
+    src: "templates/docker-compose.yml"
+    dest: "/opt/nemo-copilot/land/docker-compose.yml"
+    mode: '0660'
+
+- name: run land
+  shell: "cd /opt/nemo-copilot/land && docker-compose down && docker-compose up -d"

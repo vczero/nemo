@@ -1,0 +1,80 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 640 480">
+    <rect width="640" height="480" x="0" y="0" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+    <path d="M75.6032 410.5L576 410.5" fill="none" stroke="#ccc" class="zr1-cls-6"></path>
+    <path d="M75.6032 351.5L576 351.5" fill="none" stroke="#ccc" class="zr1-cls-6"></path>
+    <path d="M75.6032 293.5L576 293.5" fill="none" stroke="#ccc" class="zr1-cls-6"></path>
+    <path d="M75.6032 235.5L576 235.5" fill="none" stroke="#ccc" class="zr1-cls-6"></path>
+    <path d="M75.6032 176.5L576 176.5" fill="none" stroke="#ccc" class="zr1-cls-6"></path>
+    <path d="M75.6032 118.5L576 118.5" fill="none" stroke="#ccc" class="zr1-cls-6"></path>
+    <path d="M75.6032 60.5L576 60.5" fill="none" stroke="#ccc" class="zr1-cls-6"></path>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="-6.0000457763671875" transform="matrix(0,-1,1,0,20.0001,235)" fill="#333">y1</text>
+    <path d="M75.5 410L75.5 60" fill="none" stroke="#333" stroke-linecap="round" class="zr1-cls-6"></path>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(325.8016 434.9001)" fill="#333">x11</text>
+    <path d="M75.6032 410.5L576 410.5" fill="none" stroke="#333" stroke-linecap="round" class="zr1-cls-6"></path>
+    <path d="M75.6032 410.5L70.6032 410.5" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M75.6032 351.5L70.6032 351.5" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M75.6032 293.5L70.6032 293.5" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M75.6032 235.5L70.6032 235.5" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M75.6032 176.5L70.6032 176.5" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M75.6032 118.5L70.6032 118.5" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M75.6032 60.5L70.6032 60.5" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M75.5 410L75.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M117.5 410L117.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M159.5 410L159.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M200.5 410L200.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M242.5 410L242.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M284.5 410L284.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M326.5 410L326.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M367.5 410L367.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M409.5 410L409.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M451.5 410L451.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M492.5 410L492.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M534.5 410L534.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <path d="M576.5 410L576.5 415" fill="none" stroke="#333" class="zr1-cls-6"></path>
+    <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(67.6032 410)" fill="#333">0</text>
+    <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(67.6032 351.6667)" fill="#333">2,000</text>
+    <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(67.6032 293.3333)" fill="#333">4,000</text>
+    <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(67.6032 235)" fill="#333">6,000</text>
+    <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(67.6032 176.6667)" fill="#333">8,000</text>
+    <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(67.6032 118.3333)" fill="#333">10,000</text>
+    <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(67.6032 60)" fill="#333">12,000</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(96.4531 418)" fill="#333">Jan</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(138.1528 418)" fill="#333">Feb</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(179.8525 418)" fill="#333">Mar</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(221.5523 418)" fill="#333">Apr</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(263.252 418)" fill="#333">May</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(304.9517 418)" fill="#333">Jun</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(346.6515 418)" fill="#333">Jul</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(388.3512 418)" fill="#333">Aug</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(430.0509 418)" fill="#333">Sep</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(471.7507 418)" fill="#333">Oct</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(513.4504 418)" fill="#333">Nov</text>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6.0000457763671875" transform="translate(555.1501 418)" fill="#333">Dec</text>
+    <path d="M82.0667 410l28.7728 0l0 -131.25l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M123.7664 410l28.7728 0l0 -151.6667l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M165.4661 410l28.7728 0l0 -140l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M207.1659 410l28.7728 0l0 -177.9167l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M248.8656 410l28.7728 0l0 -172.0833l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M290.5653 410l28.7728 0l0 -210l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M332.2651 410l28.7728 0l0 -233.3333l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M373.9648 410l28.7728 0l0 -218.75l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M415.6645 410l28.7728 0l0 -198.3333l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M457.3643 410l28.7728 0l0 -239.1667l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M499.064 410l28.7728 0l0 -277.0833l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M540.7637 410l28.7728 0l0 -320.8333l-28.7728 0Z" fill="#e01f54" class="zr1-cls-7"></path>
+    <path d="M-5 -5l10 0l0 10l-10 0Z" transform="translate(320 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#b7b9be" stroke-width="0" class="zr1-cls-6"></path>
+    <path d="M-39.0109 -5l78.0219 0l0 22.0001l-78.0219 0Z" transform="translate(320 20)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="zr1-cls-6"></path>
+    <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" y="6.0000457763671875" transform="translate(320 20)" fill="#333333">销售金额221</text>
+    <style ><![CDATA[
+.zr1-cls-6:hover {
+pointer-events:none;
+}
+.zr1-cls-7:hover {
+cursor:pointer;
+fill:rgba(246,34,92,1);
+}
+
+]]>
+
+    </style>
+</svg>

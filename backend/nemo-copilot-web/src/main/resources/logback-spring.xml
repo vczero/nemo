@@ -1,0 +1,65 @@
+<configuration>
+    <springProperty scope="context" name="log_path" source="logging.path"/>
+    <springProperty scope="context" name="stdout_file" source="logging.files.stdout"/>
+    <springProperty scope="context" name="stderr_file" source="logging.files.stderr"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{YYYY/MM/dd HH:mm:ss} %-5level [%9.9t] %36.36logger{36} #%4line |%X{trace_id}|%X{rpc_id}| %m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <appender name="logfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{YYYY/MM/dd HH:mm:ss} %-5level [%9.9t] %36.36logger{36} #%4line |%X{trace_id}|%X{rpc_id}| %m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <File>${log_path}/${stdout_file}</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_path}/${stdout_file}.%d.%i</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="errfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{YYYY/MM/dd HH:mm:ss} %-5level [%9.9t] %36.36logger{36} #%4line |%X{trace_id}|%X{rpc_id}| %m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+        <File>${log_path}/${stderr_file}</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_path}/${stderr_file}.%d.%i</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+
+    <root level="INFO">
+        <appender-ref ref="console"/>
+        <appender-ref ref="logfile"/>
+        <appender-ref ref="errfile"/>
+    </root>
+
+    <logger name="com.ywllab.nemo.dao" level="INFO" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+    <logger name="com.ywllab.nemo.core" level="INFO" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+</configuration>

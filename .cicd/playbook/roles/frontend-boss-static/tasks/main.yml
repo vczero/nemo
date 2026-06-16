@@ -1,0 +1,20 @@
+- name: create frontend-boss directories
+  file:
+    state: directory
+    path: "{{item}}"
+    mode: '0755'
+    recurse: true
+  with_items:
+    - "/opt/nemo-copilot/frontend-boss"
+
+- name: copy frontend-boss package
+  copy:
+    src: "/tmp/nemo/frontend-boss.tar.gz"
+    dest: "/tmp/frontend-boss.tar.gz"
+    mode: '0644'
+
+- name: extract frontend-boss files
+  unarchive:
+    src: "/tmp/frontend-boss.tar.gz"
+    dest: "/opt/nemo-copilot/frontend-boss/"
+    remote_src: yes

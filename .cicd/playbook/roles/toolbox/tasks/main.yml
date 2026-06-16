@@ -1,0 +1,64 @@
+- name: create toolbox directories
+  file:
+    state: directory
+    path: "{{ item }}"
+    mode: '0755'
+    recurse: true
+  with_items:
+    - "/opt/nemo-copilot/toolbox"
+
+- name: check if toolbox image exists on remote
+  shell: "docker images -q toolbox:{{ image_tag }}"
+  register: toolbox_image_exists
+  ignore_errors: true
+
+- name: build toolbox image locally (when not exists on remote)
+  block:
+    - name: build toolbox image locally
+      shell: "cd {{ playbook_dir }}/../../docker/toolbox && docker build -t toolbox:{{ image_tag }} ."
+      delegate_to: localhost
+      become: false
+
+    - name: save toolbox image to tar
+      shell: "docker save toolbox:{{ image_tag }} > /tmp/toolbox_{{ image_tag }}.tar"
+      delegate_to: localhost
+      become: false
+
+    - name: ensure temp directory exists on remote
+      file:
+        path: "/tmp/toolbox-deploy"
+        state: directory
+        mode: '0755'
+
+    - name: copy image tar to remote
+      copy:
+        src: "/tmp/toolbox_{{ image_tag }}.tar"
+        dest: "/tmp/toolbox-deploy/toolbox_{{ image_tag }}.tar"
+        mode: '0644'
+
+    - name: load toolbox image on remote
+      shell: "docker load < /tmp/toolbox-deploy/toolbox_{{ image_tag }}.tar"
+
+    - name: cleanup local tar file
+      file:
+        path: "/tmp/toolbox_{{ image_tag }}.tar"
+        state: absent
+      delegate_to: localhost
+      become: false
+      ignore_errors: true
+
+    - name: cleanup remote tar file
+      file:
+        path: "/tmp/toolbox-deploy"
+        state: absent
+      ignore_errors: true
+  when: toolbox_image_exists.stdout == ""
+
+- name: copy docker-compose.yml
+  template:
+    src: "templates/docker-compose.yml"
+    dest: "/opt/nemo-copilot/toolbox/docker-compose.yml"
+    mode: '0660'
+
+- name: run toolbox
+  shell: "cd /opt/nemo-copilot/toolbox && docker-compose up -d --force-recreate"

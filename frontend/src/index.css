@@ -1,0 +1,6 @@
+@layer theme, base, antd, components, utilities;
+@import 'tailwindcss';
+
+@theme {
+  --shadow-sm: rgba(0, 0, 0, 0.08) 0px 2px 4px 1px;
+}

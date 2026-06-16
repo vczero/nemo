@@ -1,0 +1,76 @@
+plugins {
+    id "org.springframework.boot"
+    id "war"
+}
+
+def gitCommitHash = { ->
+    def stdout = new ByteArrayOutputStream()
+    try {
+        exec {
+            commandLine "git", "rev-parse", "--short=7", "HEAD"
+            standardOutput = stdout
+        }
+        return stdout.toString().trim()
+    } catch (Exception ignored) {
+        return "unknown"
+    }
+}
+
+ext {
+    appVersion = new Date().format("yyyyMMdd") + "-" + gitCommitHash()
+}
+
+dependencies {
+    implementation("com.github.xiaoymin:knife4j-spring-boot-starter:3.0.2") { exclude module: "guava" }
+    implementation("io.swagger:swagger-core:1.6.9")
+    implementation("org.codehaus.janino:janino:3.1.12")
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf:$springBootVersion")
+    implementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    implementation("org.springframework.boot:spring-boot-starter-mail:$springBootVersion")
+    api("com.google.guava:guava:31.1-jre")
+    api("com.alibaba:easyexcel:4.0.3")
+    api("com.alibaba:fastjson:1.2.83")
+    api("com.squareup.okhttp3:okhttp-sse:3.14.9")
+    api("io.springfox:springfox-swagger2:3.0.0")
+    api("org.flywaydb:flyway-core:5.2.4")
+    api("org.jsoup:jsoup:1.14.3")
+    api("org.springframework.session:spring-session-jdbc:2.5.5")
+    api("org.aspectj:aspectjweaver:1.9.4")
+    api("cn.hutool:hutool-all:$hutoolVersion")
+    api("com.zaxxer:HikariCP:$hikariVersion")
+    api("mysql:mysql-connector-java:8.0.29")
+    api("org.jetbrains.exposed:exposed-core:$exposedVersion")
+    api("org.jetbrains.exposed:exposed-java-time:$exposedVersion")
+    api("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
+    api("org.springframework:spring-jdbc:$springVersion")
+    api("org.testcontainers:mysql:$tcVersion")
+    api("org.testcontainers:testcontainers:$tcVersion")
+    api("com.aliyun.oss:aliyun-sdk-oss:3.15.0")
+    compileOnly("org.flywaydb:flyway-core:$flywayVersion")
+    compileOnly("org.springframework.boot:spring-boot-autoconfigure:$springBootVersion")
+
+    // 支付宝支付核心模块
+    implementation 'com.github.javen205:IJPay-AliPay:2.9.12.1-17'
+
+    // TLS 1.3 支持 (JDK 8)
+    implementation 'org.conscrypt:conscrypt-openjdk:2.5.2:linux-x86_64'
+
+    // stream api
+    api "io.reactivex.rxjava2:rxjava:2.2.21"
+    testImplementation("org.flywaydb:flyway-core:$flywayVersion")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+    testImplementation("org.springframework:spring-test:$springVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+}
+
+dependencies {
+    implementation("com.sun.mail:javax.mail:1.6.2")
+}
+
+processResources {
+    filesMatching("application.yml") {
+        expand(project.properties)
+    }
+}

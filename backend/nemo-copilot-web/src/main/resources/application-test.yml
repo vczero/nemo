@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://xxx:3306/nemo?serverTimezone=Asia/Shanghai&useUnicode=yes&characterEncoding=utf8&rewriteBatchedStatements=true
+    username: nemo
+    password: xxx
+
+app:
+  compute-task-parallel: 8
+  advertise-url: https://xxx:18000
+  toolbox:
+    svg-to-pdf:
+      url: http://xxx:8800/svg-to-pdf

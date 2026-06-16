@@ -1,0 +1,35 @@
+- name: create nginx directories
+  file:
+    state: directory
+    path: "{{item}}"
+    mode: '0755'
+    recurse: true
+  with_items:
+    - "/opt/nemo-copilot/nginx"
+    - "/opt/nemo-copilot/nginx/logs"
+
+- name: copy nginx.conf
+  template:
+    src: "nginx.conf.j2"
+    dest: "/opt/nemo-copilot/nginx/nginx.conf"
+    mode: '0644'
+
+- name: copy docker-compose.yml
+  template:
+    src: "templates/docker-compose.yml"
+    dest: "/opt/nemo-copilot/nginx/docker-compose.yml"
+    mode: '0660'
+
+- name: copy SSL certificates
+  copy:
+    src: "files/{{item}}"
+    dest: "/opt/nemo-copilot/nginx/"
+    mode: '0644'
+  with_items:
+    - "www.xxx.pem"
+    - "www.xxx.key"
+
+- name: reload nginx
+  shell: "cd /opt/nemo-copilot/nginx && docker-compose up -d --force-recreate"
+  become: yes
+  become_method: sudo

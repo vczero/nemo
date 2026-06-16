@@ -1,0 +1,8 @@
+app:
+  oss:
+    type: aliyun
+    endpoint: 
+    access-key: 
+    secret-key: 
+    bucket: nemo-copilot
+    prefix: dev

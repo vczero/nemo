@@ -1,0 +1,10 @@
+- hosts: test
+  vars:
+    otel_enabled: false
+    otel_exporter_otlp_endpoint: "https://xxx"
+    otel_exporter_otlp_headers: "Authorization=Bearer%xxx"
+    otel_exporter_otlp_protocol: "http/protobuf"
+    otel_service_name: "nemo-copilot-boss"
+    otel_resource_attributes: "service.version=1.2.3"
+  roles:
+    - { role: web, profile: "test-boss", server_port: 8771 }

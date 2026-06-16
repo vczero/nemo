@@ -1,0 +1,54 @@
+- set_fact:
+    work_dir: /opt/nemo-copilot/{{profile}}
+
+- name: ensure opentelemetry directory exists
+  become: yes
+  file:
+    path: "/usr/share/opentelemetry"
+    state: directory
+    mode: '0755'
+  when: otel_enabled | default(false)
+
+- name: download opentelemetry javaagent if not exists
+  become: yes
+  get_url:
+    url: https://repo1.maven.org/maven2/io/opentelemetry/javaagent/opentelemetry-javaagent/2.26.1/opentelemetry-javaagent-2.26.1.jar
+    dest: /usr/share/opentelemetry/opentelemetry-javaagent.jar
+    mode: '0644'
+    force: no
+  changed_when: false
+  when: otel_enabled | default(false)
+
+- name: create directories
+  file:
+    state: directory
+    path: "{{item}}"
+    recurse: true
+    mode: '0770'
+  with_items:
+    - "{{work_dir}}"
+
+- name: copy templates
+  template:
+    src: "templates/{{item}}"
+    dest: "{{work_dir}}/{{item}}"
+    mode: '0770'
+  with_items:
+    - "docker-compose.yml"
+
+- name: Create directory
+  become: yes
+  file:
+    path: "{{work_dir}}/dist"
+    state: directory
+
+- name: copy deploy package
+  copy:
+    src: "/tmp/nemo/{{item}}"
+    dest: "{{work_dir}}/dist/"
+    mode: '0770'
+  with_items:
+    - "nemo-copilot-web.jar"
+
+- name: run deploy
+  shell: "cd {{work_dir}} && docker-compose up -d --force-recreate"

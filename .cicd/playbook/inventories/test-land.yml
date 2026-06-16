@@ -1,0 +1,17 @@
+- hosts: test
+  become: yes
+  become_method: sudo
+  vars:
+    ACCESSKEY_ID: 
+    ACCESSKEY_SECRET: 
+    REGION: 
+    ENDPOINT:  
+    BUCKET_RAW: nemo-copilot
+    BUCKET_RESULT: nemo-copilot
+    BAILIAN_KEY: 
+    APP_ENV: test
+    image_tag: 0.0.8
+  roles:
+    - { role: land, server_port: 8772}
+
+

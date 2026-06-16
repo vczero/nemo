@@ -1,0 +1,20 @@
+- name: create frontend directories
+  file:
+    state: directory
+    path: "{{item}}"
+    mode: '0755'
+    recurse: true
+  with_items:
+    - "/opt/nemo-copilot/frontend"
+
+- name: copy frontend package
+  copy:
+    src: "/tmp/nemo/frontend.tar.gz"
+    dest: "/tmp/frontend.tar.gz"
+    mode: '0644'
+
+- name: extract frontend files
+  unarchive:
+    src: "/tmp/frontend.tar.gz"
+    dest: "/opt/nemo-copilot/frontend/"
+    remote_src: yes

@@ -1,0 +1,71 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 800 500">
+<rect width="800" height="500" x="0" y="0" fill="rgb(255,255,255)"></rect>
+<path d="M40 0C84 0 142.6667 30.0145 186.6667 30.0145L186.6667 311.2645C142.6667 311.2645 84 281.25 40 281.25Z" transform="translate(40 25)" fill="rgb(56,182,182)" fill-opacity="0.2" class="zr1-cls-0"></path>
+<path d="M40 281.25C56 281.25 77.3333 169.1359 93.3333 169.1359L93.3333 281.6359C77.3333 281.6359 56 393.75 40 393.75Z" transform="translate(40 25)" fill="rgb(56,182,182)" fill-opacity="0.2" class="zr1-cls-0"></path>
+<path d="M40 393.75C56 393.75 77.3333 289.6359 93.3333 289.6359L93.3333 345.8859C77.3333 345.8859 56 450 40 450Z" transform="translate(40 25)" fill="rgb(56,182,182)" fill-opacity="0.2" class="zr1-cls-0"></path>
+<path d="M226.6667 30.0145C270.6667 30.0145 329.3333 128.4185 373.3333 128.4185L373.3333 297.1685C329.3333 297.1685 270.6667 198.7645 226.6667 198.7645Z" transform="translate(40 25)" fill="rgb(199,124,105)" fill-opacity="0.2" class="zr1-cls-1"></path>
+<path d="M226.6667 198.7645C242.6667 198.7645 264 198.7363 280 198.7363L280 254.9863C264 254.9863 242.6667 255.0145 226.6667 255.0145Z" transform="translate(40 25)" fill="rgb(199,124,105)" fill-opacity="0.2" class="zr1-cls-1"></path>
+<path d="M133.3333 169.1359C149.3333 169.1359 170.6667 311.2645 186.6667 311.2645L186.6667 395.6395C170.6667 395.6395 149.3333 253.5109 133.3333 253.5109Z" transform="translate(40 25)" fill="rgb(200,214,190)" fill-opacity="0.2" class="zr1-cls-2"></path>
+<path d="M133.3333 289.6359C149.3333 289.6359 170.6667 395.6395 186.6667 395.6395L186.6667 423.7645C170.6667 423.7645 149.3333 317.7609 133.3333 317.7609Z" transform="translate(40 25)" fill="rgb(224,31,84)" fill-opacity="0.2" class="zr1-cls-3"></path>
+<path d="M413.3333 128.4185C429.3333 128.4185 450.6667 156.5193 466.6667 156.5193L466.6667 297.1443C450.6667 297.1443 429.3333 269.0435 413.3333 269.0435Z" transform="translate(40 25)" fill="rgb(218,138,145)" fill-opacity="0.2" class="zr1-cls-4"></path>
+<path d="M320 198.7363C336 198.7363 357.3333 297.1685 373.3333 297.1685L373.3333 325.2935C357.3333 325.2935 336 226.8613 320 226.8613Z" transform="translate(40 25)" fill="rgb(224,31,84)" fill-opacity="0.2" class="zr1-cls-3"></path>
+<path d="M506.6667 156.5193C522.6667 156.5193 544 170.563 560 170.563L560 283.063C544 283.063 522.6667 269.0193 506.6667 269.0193Z" transform="translate(40 25)" fill="rgb(196,182,146)" fill-opacity="0.2" class="zr1-cls-5"></path>
+<path d="M0 0l40 0l0 450l-40 0Z" transform="translate(40 25)" fill="rgb(56,182,182)" stroke="#ccc" stroke-width="0" class="zr1-cls-0"></path>
+<path d="M186.6667 30.0145l40 0l0 393.75l-40 0Z" transform="translate(40 25)" fill="rgb(199,124,105)" stroke="#ccc" stroke-width="0" class="zr1-cls-1"></path>
+<path d="M93.3333 169.1359l40 0l0 112.5l-40 0Z" transform="translate(40 25)" fill="rgb(200,214,190)" stroke="#ccc" stroke-width="0" class="zr1-cls-2"></path>
+<path d="M93.3333 289.6359l40 0l0 56.25l-40 0Z" transform="translate(40 25)" fill="rgb(224,31,84)" stroke="#ccc" stroke-width="0" class="zr1-cls-3"></path>
+<path d="M373.3333 128.4185l40 0l0 196.875l-40 0Z" transform="translate(40 25)" fill="rgb(218,138,145)" stroke="#ccc" stroke-width="0" class="zr1-cls-4"></path>
+<path d="M280 198.7363l40 0l0 56.25l-40 0Z" transform="translate(40 25)" fill="rgb(224,31,84)" stroke="#ccc" stroke-width="0" class="zr1-cls-3"></path>
+<path d="M466.6667 156.5193l40 0l0 140.625l-40 0Z" transform="translate(40 25)" fill="rgb(196,182,146)" stroke="#ccc" stroke-width="0" class="zr1-cls-5"></path>
+<path d="M560 170.563l40 0l0 112.5l-40 0Z" transform="translate(40 25)" fill="rgb(200,214,190)" stroke="#ccc" stroke-width="0" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="-7.3800506591796875" transform="translate(85 250)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Homepage</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="7.3800506591796875" transform="translate(85 250)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">8000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" xml:space="preserve" y="-7.3800506591796875" transform="translate(271.6667 251.8895)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Product Page</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="7.3800506591796875" transform="translate(271.6667 251.8895)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">7000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="-7.3800506591796875" transform="translate(178.3333 250.3859)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Search</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="7.3800506591796875" transform="translate(178.3333 250.3859)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">2000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="-7.3800506591796875" transform="translate(178.3333 342.7609)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Blog</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="7.3800506591796875" transform="translate(178.3333 342.7609)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">1000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="-7.3800506591796875" transform="translate(458.3333 251.856)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Cart</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="7.3800506591796875" transform="translate(458.3333 251.856)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">3500</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="-7.3800506591796875" transform="translate(365 251.8613)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Wishlist</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="7.3800506591796875" transform="translate(365 251.8613)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">1000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="-7.3800506591796875" transform="translate(551.6667 251.8318)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Checkout</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="7.3800506591796875" transform="translate(551.6667 251.8318)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">2500</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="-7.3800506591796875" transform="translate(645 251.813)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Purchase</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:sans-serif;" y="7.3800506591796875" transform="translate(645 251.813)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">2000</text>
+<path d="M-71.9119 -5l143.8237 0l0 26.728l-143.8237 0Z" transform="translate(400 20)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="zr1-cls-6"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:17px;font-family:sans-serif;font-weight:bold;" y="8.363983154296875" transform="translate(400 20)" fill="#333333">电商用户路径流转</text>
+<style ><![CDATA[
+.zr1-cls-0:hover {
+cursor:pointer;
+fill:rgba(61,200,200,1);
+}
+.zr1-cls-1:hover {
+cursor:pointer;
+fill:rgba(218,136,115,1);
+}
+.zr1-cls-2:hover {
+cursor:pointer;
+fill:rgba(220,235,209,1);
+}
+.zr1-cls-3:hover {
+cursor:pointer;
+fill:rgba(246,34,92,1);
+}
+.zr1-cls-4:hover {
+cursor:pointer;
+fill:rgba(239,151,159,1);
+}
+.zr1-cls-5:hover {
+cursor:pointer;
+fill:rgba(215,200,160,1);
+}
+.zr1-cls-6:hover {
+pointer-events:none;
+}
+
+]]>
+
+</style>
+</svg>

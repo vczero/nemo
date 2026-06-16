@@ -1,0 +1,22 @@
+version: '2.2'
+services:
+  land:
+    image: land:{{ image_tag }}
+    container_name: nemo-land
+    restart: always
+    network_mode: "bridge"
+    ports:
+      - '{{server_port}}:8000'
+    environment:
+      - TZ=Asia/Shanghai
+      - ACCESSKEY_ID={{ ACCESSKEY_ID }}
+      - ACCESSKEY_SECRET={{ ACCESSKEY_SECRET }}
+      - REGION={{ REGION }}
+      - ENDPOINT={{ ENDPOINT }}
+      - BUCKET_RAW={{ BUCKET_RAW }}
+      - BUCKET_RESULT={{ BUCKET_RESULT }}
+      - BAILIAN_KEY={{ BAILIAN_KEY }}
+      - APP_ENV={{ APP_ENV }}
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+      - "/opt/nemo-copilot/land/src:/app:ro"

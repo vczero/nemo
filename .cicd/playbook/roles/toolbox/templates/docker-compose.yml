@@ -1,0 +1,17 @@
+version: '2.2'
+services:
+  toolbox:
+    image: toolbox:{{ image_tag }}
+    container_name: nemo-toolbox
+    restart: always
+    network_mode: "bridge"
+    ports:
+      - '{{server_port}}:8000'
+    environment:
+      - TZ=Asia/Shanghai
+      - DASHSCOPE_API_KEY={{ dashscope_api_key }}
+      - DASHSCOPE_BASE_URL={{ dashscope_base_url }}
+      - MODEL_NAME={{ model_name }}
+      - MCP_SERVER_URL={{ mcp_server_url }}
+    volumes:
+      - "/etc/localtime:/etc/localtime"

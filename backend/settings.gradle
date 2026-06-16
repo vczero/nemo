@@ -1,0 +1,4 @@
+rootProject.name = "nemo-copilot"
+
+include(":nemo-copilot-web")
+

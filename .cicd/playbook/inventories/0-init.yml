@@ -1,0 +1,7 @@
+- hosts: prod-boss
+  roles:
+    - { role: init }
+
+- hosts: prod-api
+  roles:
+    - { role: init }

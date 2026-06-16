@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>验证码通知</title>
+  <style type="text/css">
+    body { margin: 0; padding: 0; font-family: 'Microsoft YaHei', Arial, sans-serif; background-color: #f4f7f9; }
+    .email-wrapper { width: 100%; background-color: #f4f7f9; padding: 20px 0; }
+    .content-card { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    @media screen and (max-width: 600px) {
+        .content-card { width: 95% !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f7f9;">
+<div style="display: none; max-height: 0px; overflow: hidden;" th:text="'您的验证码是 ' + ${code} + '，请尽快完成验证。'">
+  您的验证码是 829014，请尽快完成验证。
+</div>
+
+<div class="email-wrapper" style="padding: 40px 10px;">
+  <table class="content-card" align="center" cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 600px; background-color: #ffffff; border-radius: 12px; border: 1px solid #e1e8ed;">
+    <tr>
+      <td style="height: 4px; background-color: #2563eb;"></td>
+    </tr>
+
+    <tr>
+      <td style="padding: 20px 40px 40px 40px;">
+        <h2 style="font-size: 14px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">
+          Nemo实验室
+        </h2>
+        <p style="font-size: 16px; line-height: 26px; color: #334155; margin-bottom: 30px;">
+          请在验证页面输入下方的验证码以继续操作：
+        </p>
+
+        <div style="background-color: #f0f9ff; border: 1px dashed #7dd3fc; border-radius: 8px; padding: 30px; text-align: center; margin-bottom: 30px;">
+          <span style="display: block; font-size: 13px; color: #64748b; margin-bottom: 12px;">本次登录验证码</span>
+          <div th:text="${code}" style="font-family: 'Courier New', Courier, monospace; font-size: 36px; font-weight: bold; color: #0284c7; letter-spacing: 8px;">
+            829014
+          </div>
+        </div>
+
+        <p style="font-size: 13px; color: #94a3b8; line-height: 20px; text-align: center;">
+          该验证码有效时间为 <strong style="color: #64748b;" th:text="${expiryMinutes + ' 分钟'}">10 分钟</strong>。<br/>
+          若非本人操作，请忽略此邮件。
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="background-color: #f8fafc; padding: 30px 40px; border-top: 1px solid #f1f5f9; text-align: center;">
+        <div style="font-size: 14px; font-weight: bold; color: #64748b; margin-bottom: 5px;">YWLLab</div>
+        <div style="font-size: 12px; color: #94a3b8;">新一代数据挖掘与可视化平台</div>
+        <div style="margin: 15px 0; height: 1px; background-color: #e2e8f0;"></div>
+        <p style="font-size: 12px; color: #94a3b8; margin: 0;">
+          浙江省杭州市西湖区<br/>
+          <a href="https://www.ywllab.com" style="color: #3b82f6; text-decoration: none;">https://www.ywllab.com</a>
+        </p>
+        <p style="font-size: 11px; color: #cbd5e1; margin-top: 15px;">
+          &copy; 2026 DeepCoord Technology. All rights reserved.
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

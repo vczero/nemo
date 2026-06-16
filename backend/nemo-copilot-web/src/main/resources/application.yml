@@ -1,0 +1,57 @@
+server:
+  port: 8770
+  tomcat:
+    max-threads: 1000
+
+logging:
+  path: /usr/local/tomcat/logs
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  profiles:
+    active: ${activeProfile}
+  jackson:
+    serialization:
+      indent-output: true
+  thymeleaf:
+    prefix: classpath:/static/
+  task:
+    scheduling.pool.size: 100
+  flyway:
+    ignoreMissingMigrations: true
+    locations:
+      - classpath:db/migration
+  session:
+    store-type: jdbc
+    timeout: 604800s
+  mvc:
+    async:
+      request-timeout: 600000
+  mail:
+    host: smtp.xxx.com
+    port: 465
+    username: postmaster@xxx.com
+    password: xxx
+    protocol: smtps
+    properties:
+      mail.smtp.ssl.enable: true
+      mail.smtp.auth: true
+      mail.smtp.connectiontimeout: 5000
+      mail.smtp.timeout: 5000
+      mail.smtp.writetimeout: 5000
+
+app:
+  version: ${appVersion}
+  oss:
+    type: aliyun
+    endpoint: oss-cn-hangzhou.aliyuncs.com
+    bucket: nemo-copilot
+    prefix: 24Be8jkiG4
+    access-key: xxx
+    secret-key: xxx
+  jwt:
+    secret: xxx
+    expire-seconds: 86400

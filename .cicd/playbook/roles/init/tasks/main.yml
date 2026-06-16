@@ -1,0 +1,18 @@
+- name: Check if docker-compose exists
+  shell: docker-compose -v
+  register: docker_compose_check
+  ignore_errors: true
+  changed_when: false
+
+- name: Install docker-compose-plugin if needed
+  dnf:
+    name: docker-compose-plugin
+    state: present
+  when: docker_compose_check.rc != 0
+
+- name: Create docker-compose symlink
+  file:
+    src: /usr/libexec/docker/cli-plugins/docker-compose
+    dest: /usr/bin/docker-compose
+    state: link
+  when: docker_compose_check.rc != 0
